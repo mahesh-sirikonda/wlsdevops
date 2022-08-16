@@ -93,7 +93,7 @@ Details of the deployment
 
 # Step 9 (Deployment Spec)
 1. Refer to https://github.com/wenjian80/wlsdevops/blob/main/deployment_spec.yaml
-2. in short what is trying to do is to use vault to replace the weblogic user name and password. It change the permission of the files and run /u01/devops/deployapp.sh. refer to oracle docs for more information.
+2. in short what is trying to do is to use vault to replace the weblogic user name and password. It change the permission of the files and run /u01/devops/deployapp.sh. https://github.com/wenjian80/wlsdevops/blob/main/deployapp.sh  refer to oracle docs for more information.
 
 ![enter image description here](https://github.com/wenjian80/wlsdevops/blob/main/image/deplopymentspec.JPG)
 
