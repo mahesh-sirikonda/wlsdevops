@@ -94,7 +94,7 @@ steps:
       wget -q https://objectstorage.us-phoenix-1.oraclecloud.com/n/apacaseanset01/b/BJ_Public/o/jdk-8u341-linux-x64.tar.gz
       tar xf *tar.gz
       rm *tar.gz
-      ls -l      
+      ls -l
       export JAVA_HOME=`echo -n ~/InstalledSoftware/jdk1.8*`
       export PATH=$JAVA_HOME/bin:$PATH
       echo Path is
