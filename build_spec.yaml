@@ -159,4 +159,8 @@ outputArtifacts:
   - name: wlst_sh
     type: BINARY
     location: ${OCI_PRIMARY_SOURCE_DIR}/deployapp.sh
+  - name: deployment_spec
+    type: BINARY
+    location: ${OCI_PRIMARY_SOURCE_DIR}/deployment_spec.yaml
+    
     
