@@ -4,14 +4,17 @@ runAs: root
 env: 
   variables: 
     version: ${DEPLOY_VERSION}
-files:   
+  vaultVariables:
+    WLS_UID: ocid1.vaultsecret.oc1.phx.amaaaaaac7x6gxiajmuyqddfk2mvi7kskglthuk5gswgxlc2bxjlgvo2ttoa
+    WLS_PWD: ocid1.vaultsecret.oc1.phx.amaaaaaac7x6gxiazd2jjjxa7jjhfyc5yg4t53e4zbbvc7sqnm3wqulmt3hq
+files:
    - source: opdemo.war
-    destination: /u01/devops/
+     destination: /u01/devops/
    - source: manageApplication.py
-    destination: /u01/devops/
+     destination: /u01/devops/
    - source: deployapp.sh
-    destination: /u01/devops/
-steps: 
+     destination: /u01/devops/
+steps:
   - stepType: Command
     name: Chmod Script
     command: chmod +x /u01/devops/deployapp.sh
