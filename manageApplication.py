@@ -5,7 +5,6 @@ from java.lang import System
 #Python Script to manage applications in weblogic server.
 #This script takes input from command line and executes it.
 #It can be used to check status,stop,start,deploy,undeploy of applications in weblogic server using weblogic wlst tool.
-#Company: TechPaste Solutions
 import getopt
 #========================
 #Usage Section
