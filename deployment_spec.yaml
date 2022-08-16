@@ -1,6 +1,6 @@
 version: 1.0
 component: deployment
-runAs: opc
+runAs: root
 shell: bash
 env: 
   variables: 
