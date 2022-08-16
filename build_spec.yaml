@@ -43,8 +43,11 @@ shell: bash
 # ignore for now GITHUB_USERNAME = the OCID of the vault secret contining the users github usename
 # OCIR_HOST - The hostname part of the image tags for the image registry to use 
 # OCIR_STORAGE_NAMEPACE - The tenancy storage namespace part of the image tag
-
-env:
+  vaultVariables:
+    WLS_UID: ocid1.vaultsecret.oc1.phx.amaaaaaac7x6gxiajmuyqddfk2mvi7kskglthuk5gswgxlc2bxjlgvo2ttoa
+    WLS_PWD: ocid1.vaultsecret.oc1.phx.amaaaaaac7x6gxiazd2jjjxa7jjhfyc5yg4t53e4zbbvc7sqnm3wqulmt3hq
+ 
+ env:
   # these are local variables to the build config, we need to declare them here so thet will follow on in subsequent build stages
   # Note that PATH seems to be automatically added to the list of variables who's value is preserved across commands
   variables:
@@ -61,11 +64,15 @@ steps:
       echo $PATH
       echo JAVA_HOME is
       echo $JAVA_HOME
+      export WLS_UID=$WLS_UID
+      export WLS_PWD=$WLS_PWD
       cd ${OCI_PRIMARY_SOURCE_DIR}
       ls
       echo Extracting export variables - Working in `pwd`
       cd ${OCI_PRIMARY_SOURCE_DIR}      
-      echo "DEPLOY_VERSION: " $DEPLOY_VERSION      
+      echo "DEPLOY_VERSION: " $DEPLOY_VERSION
+      echo WLS_UID is $WLS_UID
+      echo WLS_PWD is $WLS_PWD
     onFailure:
       - type: Command
         timeoutInSeconds: 40
@@ -146,3 +153,10 @@ outputArtifacts:
   - name: wls_war
     type: BINARY
     location: ${OCI_PRIMARY_SOURCE_DIR}/target/opdemo.war
+  - name: wlst_py
+    type: BINARY
+    location: ${OCI_PRIMARY_SOURCE_DIR}/manageApplication.py
+  - name: wlst_sh
+    type: BINARY
+    location: ${OCI_PRIMARY_SOURCE_DIR}/deployapp.sh
+    

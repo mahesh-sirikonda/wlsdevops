@@ -1,0 +1,48 @@
+version: 1.0
+component: deployment
+runAs: root
+env:
+variables:
+files:
+# This section is to define how the files in the artifact shall
+# be put on the compute instance
+- source: /opdemo.war
+destination: /u01/devops/
+- source: /opdemo.war
+destination: /u01/devops/
+- source: /manageApplication.py
+destination: /u01/devops/
+- source: /deployapp.sh
+destination: /u01/devops/
+
+steps:
+# This section is to define the scripts that each step shall run on the instance - stepType: Command
+name: Copy Webapp
+command: "cp /tmp/app.war /home/oracle/"
+runAs: oracle
+timeoutInSeconds: 60
+- stepType: Command
+name: Copy create_datasource.py
+command: "cp /tmp/create_datasource.py /home/oracle/"
+runAs: oracle
+timeoutInSeconds: 60
+- stepType: Command
+name: Copy datasource details.properties
+command: "cp /tmp/details.properties /home/oracle/"
+runAs: oracle
+timeoutInSeconds: 60
+- stepType: Command
+name: Copy wls.sh script
+command: "cp /tmp/wls.sh /home/oracle/"
+runAs: oracle
+timeoutInSeconds: 60
+- stepType: Command
+name: Chmod Script
+command: "chmod +x /home/oracle/wls.sh"
+runAs: oracle
+timeoutInSeconds: 60
+- stepType: Command
+name: Run script
+command: "/home/oracle/wls.sh"
+runAs: oracle
+timeoutInSeconds: 60
