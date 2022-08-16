@@ -5,11 +5,11 @@ env:
   variables: 
     version: ${DEPLOY_VERSION}
 files:   
-   - source: /opdemo.war
+   - source: opdemo.war
     destination: /u01/devops/
-   - source: /manageApplication.py
+   - source: manageApplication.py
     destination: /u01/devops/
-   - source: /deployapp.sh
+   - source: deployapp.sh
     destination: /u01/devops/
 steps: 
   - stepType: Command
