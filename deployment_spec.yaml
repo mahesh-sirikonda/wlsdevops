@@ -17,32 +17,12 @@ destination: /u01/devops/
 
 steps:
 # This section is to define the scripts that each step shall run on the instance - stepType: Command
-name: Copy Webapp
-command: "cp /tmp/app.war /home/oracle/"
-runAs: oracle
-timeoutInSeconds: 60
-- stepType: Command
-name: Copy create_datasource.py
-command: "cp /tmp/create_datasource.py /home/oracle/"
-runAs: oracle
-timeoutInSeconds: 60
-- stepType: Command
-name: Copy datasource details.properties
-command: "cp /tmp/details.properties /home/oracle/"
-runAs: oracle
-timeoutInSeconds: 60
-- stepType: Command
-name: Copy wls.sh script
-command: "cp /tmp/wls.sh /home/oracle/"
-runAs: oracle
-timeoutInSeconds: 60
-- stepType: Command
 name: Chmod Script
-command: "chmod +x /home/oracle/wls.sh"
-runAs: oracle
+command: "chmod +x /u01/devops/deployapp.sh"
+runAs: opc
 timeoutInSeconds: 60
 - stepType: Command
 name: Run script
-command: "/home/oracle/wls.sh"
-runAs: oracle
+command: "/u01/devops/deployapp.sh"
+runAs: opc
 timeoutInSeconds: 60
