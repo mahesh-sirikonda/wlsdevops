@@ -94,8 +94,8 @@ steps:
       wget -q https://objectstorage.us-phoenix-1.oraclecloud.com/n/apacaseanset01/b/BJ_Public/o/jdk-8u341-linux-x64.tar.gz
       tar xf *tar.gz
       rm *tar.gz
-      ls -l
-      export JAVA_HOME=`echo -n ~/InstalledSoftware/jdk-*`
+      ls -l      
+      export JAVA_HOME=`echo -n ~/InstalledSoftware/jdk1.8*`
       export PATH=$JAVA_HOME/bin:$PATH
       echo Path is
       echo $PATH
@@ -119,7 +119,7 @@ steps:
       echo JAVA_HOME is $JAVA_HOME
       echo DEPLOY_VERSION is $DEPLOY_VERSION      
       echo OCI_PRIMARY_SOURCE_DIR is ${OCI_PRIMARY_SOURCE_DIR}
-      echo This is the Java version, it should be Java 17
+      echo This is the Java version, it should be Java 1.8
       java -version
       echo This is the maven version
       mvn -v 
