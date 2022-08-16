@@ -8,8 +8,6 @@ files:
 # be put on the compute instance
 - source: /opdemo.war
 destination: /u01/devops/
-- source: /opdemo.war
-destination: /u01/devops/
 - source: /manageApplication.py
 destination: /u01/devops/
 - source: /deployapp.sh
