@@ -1,6 +1,7 @@
 version: 1.0
 component: deployment
-runAs: root
+runAs: opc
+shell: bash
 env: 
   variables: 
     version: ${DEPLOY_VERSION}
