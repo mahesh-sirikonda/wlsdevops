@@ -15,24 +15,37 @@
 1. We are making use of compute instance to run webloigc, container artifacts, vaults, oci devops service as well as App Dependency Management to scan code.
 2. The steps are quite similair to https://github.com/wenjian80/helloHelidonDevops. But this is for weblogic vm and not OKE based.
 
+refer to https://docs.oracle.com/en-us/iaas/Content/devops/using/deploy_instancegroups.htm
  
 # Step 1 (WLS)
 1. Spin up a compute and install weblogic or use market place. In here we are use VM based to run weblogic and not wls oke based.
 2. Edit the /etc/sudoers file and added the below
 ![enter image description here](https://github.com/wenjian80/wlsdevops/blob/main/image/sudoer.JPG)
 
+Refer to https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/runningcommands.htm#permissions
+
 # Step 2 (ADM)
 1. Go to Developer Services->App Dependency Management->Koweledge based
 2. Create a knowlegde based and jot down the ocid. We are going to use it later.
+
+Refer to https://docs.oracle.com/en-us/iaas/Content/application-dependency-management/home.htm
+
+Refer to https://blogs.oracle.com/cloud-infrastructure/post/security-scanning-for-maven-now-available-in-oci-devops
 
 # Step 3 (Valut)
 1. Go Identity & Security->Valut
 2. Create secret to store weblolgic user name and password and jot down the ocid. We are going to use it later.
 ![enter image description here](https://github.com/wenjian80/wlsdevops/blob/main/image/vault.JPG)
 
+refer to https://docs.oracle.com/en-us/iaas/Content/devops/using/build_specs.htm
+
 # Step 4 (Policy)
 1. Follow https://github.com/wenjian80/helloHelidonDevops#prereq on how the policy is created.
 2. We are also going to create a dynamic group to include this wls vm so it can use the oci devops. Then a policy will be create to all ow this dynmaic group to read vault/artifacts etc. The policy are not fine grain, i just grant to tenancy. Below is the screen shot which is self explanatory. The policies are quite untidy, but it give you a feel what polices are needed. Refer to oracle doc for policies statement
+
+Refer to https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Compute/Tasks/runningcommands.htm#permissions
+
+Refer to https://docs.oracle.com/en-us/iaas/Content/devops/using/devops_iampolicies.htm
 
 ![enter image description here](https://github.com/wenjian80/wlsdevops/blob/main/image/dg1.JPG)
 
