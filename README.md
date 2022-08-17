@@ -123,3 +123,6 @@ Go to instance->compute (your wls compute)->Run command and see the command
 ![enter image description here](https://github.com/wenjian80/wlsdevops/blob/main/image/run3.JPG)
 
 ![enter image description here](https://github.com/wenjian80/wlsdevops/blob/main/image/run4.JPG)
+
+# Step 11 ADM report to scan java pom file code
+![enter image description here](https://github.com/wenjian80/helloHelidonDevopsScreenShots/blob/main/adm_report.JPG)
