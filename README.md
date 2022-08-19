@@ -89,6 +89,7 @@ Install jdk
 ![enter image description here](https://github.com/wenjian80/wlsdevops/blob/main/image/installjdk.JPG)
 
 maven build
+
 ![enter image description here](https://github.com/wenjian80/wlsdevops/blob/main/image/buildcode.JPG)
 
 App Dependency Management scanning of the codes in pom file
