@@ -67,42 +67,42 @@ https://github.com/wenjian80/helloHelidonDevops#step-7-create-code-repo
 # Step 6 (Pipeline)
 1. Below is a screen shot of how things will look like. it is self explanatory, i will find time to explain each screen shots.
 
-Maven Build
+**Maven Build**
 ![enter image description here](https://github.com/wenjian80/wlsdevops/blob/main/image/maven_build.JPG)
 
-Push artifcats
+**Push artifcats**
 ![enter image description here](https://github.com/wenjian80/wlsdevops/blob/main/image/push_artifcats.JPG)
 
-Deploy to wls which later will call wlst to deploy to weblogic.
+**Deploy to wls which later will call wlst to deploy to weblogic.**
 ![enter image description here](https://github.com/wenjian80/wlsdevops/blob/main/image/deploy_wls.JPG)
 
-parameters 
+**parameters**
 ![enter image description here](https://github.com/wenjian80/wlsdevops/blob/main/image/build_piple_parameters.JPG)
 
 # Step 7 (build spec)
  it is self explanatory, i will find time to explain each screen shots for the build specs in https://github.com/wenjian80/wlsdevops/blob/main/build_spec.yaml
 
-using vaults to store weblogic user name and password
+**using vaults to store weblogic user name and password**
 ![enter image description here](https://github.com/wenjian80/wlsdevops/blob/main/image/wls_valut.JPG)
 
-Install jdk
+**Install jdk**
 ![enter image description here](https://github.com/wenjian80/wlsdevops/blob/main/image/installjdk.JPG)
 
-maven build
+**maven build**
 
 ![enter image description here](https://github.com/wenjian80/wlsdevops/blob/main/image/buildcode.JPG)
 
-App Dependency Management scanning of the codes in pom file
+**App Dependency Management scanning of the codes in pom file**
 ![enter image description here](https://github.com/wenjian80/wlsdevops/blob/main/image/adm.JPG)
 
-Store those asset in artifcacts
+**Store those asset in artifcacts**
 ![enter image description here](https://github.com/wenjian80/wlsdevops/blob/main/image/storing%20artifcats.JPG)
 
 # Step 8 (Deployment pipeline)
 Deployment view
 ![enter image description here](https://github.com/wenjian80/wlsdevops/blob/main/image/deployment1.JPG)
 
-Details of the deployment
+**Details of the deployment**
 ![enter image description here](https://github.com/wenjian80/wlsdevops/blob/main/image/deployment2.JPG)
 
 # Step 9 (Deployment Spec)
