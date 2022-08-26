@@ -3,6 +3,7 @@
 
 1. Please refer to offical documentation for proper steps.
 2. The scripts provided are just a reference/educational.
+3. TODO cache maven libs into object storage
 
 
 # Purpose
