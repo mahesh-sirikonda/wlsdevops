@@ -49,10 +49,12 @@ env:
 # ignore for now GITHUB_PATH_SECRET_OCID - the OCID of the vault secret containing the users github parsonal access token
 # ignore for now GITHUB_USERNAME = the OCID of the vault secret contining the users github usename
 # OCIR_HOST - The hostname part of the image tags for the image registry to use 
-# OCIR_STORAGE_NAMEPACE - The tenancy storage namespace part of the image tag
+# OCIR_STORAGE_NAMEPACE - The 
+
+cy storage namespace part of the image tag
   vaultVariables:
-    WLS_UID: ocid1.vaultsecret.oc1.phx.amaaaaaac7x6gxiajmuyqddfk2mvi7kskglthuk5gswgxlc2bxjlgvo2ttoa
-    WLS_PWD: ocid1.vaultsecret.oc1.phx.amaaaaaac7x6gxiazd2jjjxa7jjhfyc5yg4t53e4zbbvc7sqnm3wqulmt3hq
+    WLS_UID: ocid1.vaultsecret
+    WLS_PWD: ocid1.vaultsecret
     
 
 steps:        
@@ -88,8 +90,8 @@ steps:
       pomFilePath: ${OCI_PRIMARY_SOURCE_DIR}/pom.xml 
       maxPermissibleCvssV2Score: 10.0
       maxPermissibleCvssV3Score: 10.0
-    knowledgeBaseId: ocid1.admknowledgebase.oc1.phx.amaaaaaac7x6gxiajblqcdggdeo2vhvj223cinnbhwbnhhbilf4hgfaah4iq
-    vulnerabilityAuditCompartmentId: ocid1.compartment.oc1..aaaaaaaaq5riyrdcspo6jk5jd3ujhqvzjuq237gfih6khmotg4foqtmlvjwa
+    knowledgeBaseId: ocid1.admknowledgebase.oc1
+    vulnerabilityAuditCompartmentId: ocid1.compartment.oc1
     vulnerabilityAuditName: wlsjavareport
   - type: Command
     name: "Install local JDK"
