@@ -100,7 +100,7 @@ steps:
       cd ~
       mkdir InstalledSoftware
       cd InstalledSoftware
-      wget -q https://objectstorage.us-phoenix-1.oraclecloud.com/n/apacaseanset01/b/BJ_Public/o/jdk-8u341-linux-x64.tar.gz
+      wget -q https://objectstorag-1.oraclecloud.com/n/integration01/b/BJ/o/jdk-8u341-linux-x64.tar.gz
       tar xf *tar.gz
       rm *tar.gz
       ls -l
